@@ -10,8 +10,8 @@ const ArticlePage = () => {
         // React fragment, in react cannot return more than one top level element (heading and paragraph, so need to wrap it into a react fragment)
         <> 
         <h1>{article.title}</h1>
-        {article.content.map(paragraph => (
-            <p>{paragraph}</p>
+        {article.content.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
         ))}
         </> 
     );
